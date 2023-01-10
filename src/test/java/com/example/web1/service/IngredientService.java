@@ -1,5 +1,10 @@
 package com.example.web1.service;
 
+import com.example.web1.model.Ingredient;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class IngredientService {
     @Service
 
@@ -16,13 +21,14 @@ public class IngredientService {
             return ingredient;
         }
 
-        public Ingredient getById (String id){
-            if (ingredients.containsKey(id)){
-                return ingredients.get(id);}
-            else {
+        public Ingredient getById(String id) {
+            if (ingredients.containsKey(id)) {
+                return ingredients.get(id);
+            } else {
                 throw new RuntimeException("Такого инредиента нет");
             }
         }
     }
-    }
 }
+
+

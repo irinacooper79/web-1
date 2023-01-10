@@ -1,5 +1,7 @@
 package com.example.web1.controller;
 
+import com.example.web1.service.RecipeService;
+
 public class RecipeController {
     @RestController
     @RequestMapping("/recipe")

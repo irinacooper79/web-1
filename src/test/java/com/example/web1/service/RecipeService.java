@@ -1,5 +1,9 @@
 package com.example.web1.service;
 
+import com.example.web1.model.Recipe;
+
+import java.util.HashMap;
+
 public class RecipeService {
     @Service
 
@@ -15,11 +19,13 @@ public class RecipeService {
             }
             return recipe;
         }
-        public Recipe getById (String id){
-            if (recipes.containsKey(id)){
-                return recipes.get(id);}
-            else {
+
+        public Recipe getById(String id) {
+            if (recipes.containsKey(id)) {
+                return recipes.get(id);
+            } else {
                 throw new RuntimeException("Такого рецепта нет");
             }
         }
     }
+}
