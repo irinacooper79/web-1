@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class IngredientService {
     @Service
-
     public class IngredientService {
         private final Map<Long, Ingredient> ingredients = new HashMap<>();
         private static long lastId = 0;

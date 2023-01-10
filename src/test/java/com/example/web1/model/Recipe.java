@@ -1,5 +1,4 @@
 package com.example.web1.model;
-
 public class Recipe {
     public class Recipe {
         private String id;

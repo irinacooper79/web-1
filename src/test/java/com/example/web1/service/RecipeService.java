@@ -6,7 +6,6 @@ import java.util.HashMap;
 
 public class RecipeService {
     @Service
-
     public class RecipeService {
         private final Map<Long, Recipe> recipes = new HashMap<Long, Recipe>();
         private static long lastId = 0;
