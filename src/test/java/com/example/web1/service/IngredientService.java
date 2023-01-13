@@ -1,15 +1,15 @@
 package com.example.web1.service;
 
 import com.example.web1.model.Ingredient;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class IngredientService {
     @Service
-    public class IngredientService {
         private final Map<Long, Ingredient> ingredients = new HashMap<>();
-        private static long lastId = 0;
+            private static long lastId = 0;
 
         public Ingredient addIngredient(Ingredient ingredient) {
             if (ingredients.containsKey(ingredient.getId())) {

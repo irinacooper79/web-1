@@ -1,6 +1,5 @@
 package com.example.web1.model;
 public class Recipe {
-    public class Recipe {
         private String id;
         private final String name;
         private final int time;

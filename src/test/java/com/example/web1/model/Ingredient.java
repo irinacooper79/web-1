@@ -1,7 +1,6 @@
 package com.example.web1.model;
 
 public class Ingredient {
-    public class Ingredient {
         private String id;
         private String name;
         private int quantityIngredient;
