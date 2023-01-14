@@ -1,23 +1,31 @@
 package com.example.web1.controller;
 
 import com.example.web1.model.Recipe;
-import com.example.web1.service.RecipeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import me.recipe.bookrecipes.model.Recipe;
+import me.recipe.bookrecipes.servic.RecipeService;
+import org.springframework.web.bind.annotation.*;
+import java.util.Collection;
+@RestController
+@RequestMapping("/recipe")
 public class RecipeController {
-    @RestController
-    @RequestMapping("/recipe")
+    public final RecipeService recipeService;
 
-         private final RecipeService recipeService;
-        @GetMapping
-        public Collection<Recipe> getAllRecipe() {
-            return recipeService.getAll();
+public RecipeController(RecipeService recipeService) {
+        this.recipeService = recipeService;
         }
 
-        public RecipeController(RecipeService recipeService) {
-            this.recipeService = recipeService;
+@GetMapping
+public Collection<Recipe>getAll() {
+        public Collection<Recipe> getAll () {
+                return this.recipeService.getAll();
         }
-    }
+
+        @PostMapping
+        public Recipe addRecipe (@RequestBody Recipe Object recipe;
+        recipe = null;
+        recipe){
+                public Recipe addRecipe (@RequestBody Recipe recipe){
+                        return this.recipeService.addRecipe(recipe);
+                }
+        }
 }

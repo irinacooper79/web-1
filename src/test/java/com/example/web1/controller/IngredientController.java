@@ -2,13 +2,13 @@ package com.example.web1.controller;
 
 import com.example.web1.model.Ingredient;
 import com.example.web1.service.IngredientService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-
+@RestController
+@RequestMapping("/ingredient")
 public class IngredientController {
-    @RestController
-    @RequestMapping("/ingredient")
 
         private final IngredientService ingredientService;
         public IngredientController(IngredientService IngredientService) {
@@ -20,7 +20,7 @@ public class IngredientController {
         }
         @PostMapping
         public Ingredient createIngredient (@RequestBody Ingredient ingredient){
-            return this.ingredientService.addIngredient(ingredient);
+                        return this.ingredientService.addIngredient(ingredient);
         }
     }
 }

@@ -1,44 +1,50 @@
 package com.example.web1.model;
+
+import com.example.web1.service.Ingredient;
+
+import java.util.List;
+
 public class Recipe {
-        private String id;
-        private final String name;
-        private final int time;
-        private String [] ingredientLine;
-        private String [] step;
+    //private int id = 0;
 
-        public Recipe(String id, String name, int time, String[] ingredientLine, String[] step) {
-            this.id = id;
-            this.name = name;
+    private String nameRecipe;
+    private int time;
+    private List<Ingredient> ingredients;
+    private List<String> preparingSteps;
+
+
+    public Recipe(String nameRecipe, int time) {
+    public Recipe(String nameRecipe, int time){
+            this.nameRecipe = nameRecipe;
             this.time = time;
-            this.ingredientLine = ingredientLine;
-            this.step = step;
         }
 
-        public String getId() {
-            return id;
+        //public int getId() {
+        //return id;
+        //}
+
+        public String getNameRecipe () {
+            return nameRecipe;
+        }
+        @ @ -39, 10 + 32, 6 @@public List<String> getPreparingSteps () {
+            return preparingSteps;
         }
 
-        public String getName() {
-            return name;
-        }
-        public int getTime() {
-            return time;
-        }
+        // public void setId(int id) {
+        // this.id = id;
+        //}
 
-        public String[] getIngredientLine() {
-            return ingredientLine;
+        public void setNameRecipe (String nameRecipe){
+            this.nameRecipe = nameRecipe;
         }
-
-        public void setIngredientLine(String[] ingredientLine) {
-            this.ingredientLine = ingredientLine;
+        public void setTime ( int time){
+            this.time = time;
         }
-
-        public String[] getStep() {
-            return step;
+        public void setIngredients (List < Ingredient > ingredients) {
+            this.ingredients = ingredients;
         }
-
-        public void setStep(String[] step) {
-            this.step = step;
+        public void setPreparingSteps (List < String > preparingSteps) {
+            this.preparingSteps = preparingSteps;
         }
     }
 }
