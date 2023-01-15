@@ -1,26 +1,20 @@
 package com.example.web1.service;
 
-
-import com.example.web1.controller.RecipeService;
-import me.recipe.bookrecipes.model.Recipe;
-import me.recipe.bookrecipes.servic.RecipeService;
-import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class RecipeServiceImpl implements RecipeService {
-    private final Map<Integer, Recipe> recipes = new HashMap<>();
+public class RecipeService {
+    private final Map<Integer, RecipeService> recipes = new HashMap<>();
 
     private int id = 0;
 
-    public Collection<Recipe> getAll() {// получение всех рец
+    public Collection<RecipeService> getAll() {// получение всех рец
         return recipes.values();
     }
 
-    public Recipe getRecipeById(int id) {
+    public RecipeService getById(int id) {
         if (recipes.containsKey(id)) {
             return recipes.get(id);
         } else {
@@ -28,7 +22,7 @@ public class RecipeServiceImpl implements RecipeService {
         }
     }
 
-    public Recipe addRecipe(Recipe recipe) {
+    public RecipeService addRecipe(RecipeService recipe) {  // доб рец
         if (recipes.containsKey(id)) {
             throw new RuntimeException("Такой рецепт уже есть!");
         } else {

@@ -33,7 +33,6 @@ public class Recipe {
         // public void setId(int id) {
         // this.id = id;
         //}
-
         public void setNameRecipe (String nameRecipe){
             this.nameRecipe = nameRecipe;
         }

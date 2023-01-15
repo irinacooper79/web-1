@@ -19,7 +19,6 @@ public Collection<Recipe>getAll() {
         public Collection<Recipe> getAll () {
                 return this.recipeService.getAll();
         }
-
         @PostMapping
         public Recipe addRecipe (@RequestBody Recipe Object recipe;
         recipe = null;

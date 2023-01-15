@@ -13,7 +13,6 @@ public class Ingredient {
         this.amount = amount;
         this.unit = unit;
     }
-
     public String getNameIngredient() {
         return nameIngredient;
     }
