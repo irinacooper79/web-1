@@ -1,10 +1,11 @@
-package me.recipe.homework.service;
+package service;
 
-import me.recipe.homework.model.Ingredient;
-import me.recipe.homework.model.Recipe;
-import org.springframework.stereotype.Service;
+import model.Ingredient;
+import model.Recipe;
+import stereotype.Service;
 
 import javax.swing.*;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -30,5 +31,9 @@ public class IngredientService {
         else {
             throw new RuntimeException("Такого инредиента нет");
         }
+    }
+
+    public Collection<model.Ingredient> getAll() {
+
     }
 }

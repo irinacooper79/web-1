@@ -1,4 +1,4 @@
-package me.recipe.homework.model;
+package model;
 
 import javax.swing.*;
 

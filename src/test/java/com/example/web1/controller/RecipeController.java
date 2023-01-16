@@ -1,8 +1,6 @@
-package com.example.web1.controller;
+package controller;
 
-import me.recipe.homework.service.RecipeService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import service.RecipeService;
 
 @RestController
 @RequestMapping("/recipe")

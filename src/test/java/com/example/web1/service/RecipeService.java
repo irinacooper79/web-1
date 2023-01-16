@@ -1,7 +1,7 @@
-package me.recipe.homework.service;
+package service;
 
-import me.recipe.homework.model.Recipe;
-import org.springframework.stereotype.Service;
+import model.Recipe;
+import Service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,5 +26,8 @@ public class RecipeService {
         else {
             throw new RuntimeException("Такого рецепта нет");
         }
+    }
+
+    public Collection<Recipe> getAll() {
     }
 }

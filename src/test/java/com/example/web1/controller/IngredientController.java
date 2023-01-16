@@ -1,17 +1,13 @@
-package com.example.web1.controller;
+package controller;
 
-package me.recipe.homework.controller;
-
-import me.recipe.homework.model.Ingredient;
-import me.recipe.homework.model.Recipe;
-import me.recipe.homework.service.IngredientService;
-import org.apache.coyote.Request;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import model.Ingredient;
+import model.Recipe;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import service.IngredientService;
+import Request;
 
-@RestController
+import java.util.Collection;
+
 @RequestMapping("/ingredient")
 
 public class IngredientController {
