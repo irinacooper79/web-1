@@ -1,33 +1,30 @@
-package com.example.web1.service;
+package me.recipe.homework.service;
 
-import java.util.Collection;
+import me.recipe.homework.model.Recipe;
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
+
 public class RecipeService {
-    private final Map<Integer, RecipeService> recipes = new HashMap<>();
+    private final Map<Long, Recipe> recipes = new HashMap<Long, Recipe>();
+    private static long lastId = 0;
 
-    private int id = 0;
-
-    public Collection<RecipeService> getAll() {// получение всех рец
-        return recipes.values();
-    }
-
-    public RecipeService getById(int id) {
-        if (recipes.containsKey(id)) {
-            return recipes.get(id);
+    public Recipe addRecipe(Recipe recipe) {
+        if (recipes.containsKey(recipe.getId())) {
+            throw new RuntimeException("Такой рецепт уже есть");
         } else {
-            throw new RuntimeException(" Такого рецепта нет!");
-        }
-    }
-
-    public RecipeService addRecipe(RecipeService recipe) {  // доб рец
-        if (recipes.containsKey(id)) {
-            throw new RuntimeException("Такой рецепт уже есть!");
-        } else {
-            recipes.put(id++, recipe);
+            recipes.put(lastId++, recipe);
         }
         return recipe;
+    }
+    public Recipe getById (String id){
+        if (recipes.containsKey(id)){
+            return recipes.get(id);}
+        else {
+            throw new RuntimeException("Такого рецепта нет");
+        }
     }
 }

@@ -1,49 +1,47 @@
-package com.example.web1.model;
+package me.recipe.homework.model;
 
-import com.example.web1.service.Ingredient;
-
-import java.util.List;
+import javax.swing.*;
 
 public class Recipe {
-    //private int id = 0;
+    private String id;
+    private final String name;
+    private final int time;
+    private String [] ingredientLine;
+    private String [] step;
 
-    private String nameRecipe;
-    private int time;
-    private List<Ingredient> ingredients;
-    private List<String> preparingSteps;
+    public Recipe(String id, String name, int time, String[] ingredientLine, String[] step) {
+        this.id = id;
+        this.name = name;
+        this.time = time;
+        this.ingredientLine = ingredientLine;
+        this.step = step;
+    }
 
+    public String getId() {
+        return id;
+    }
 
-    public Recipe(String nameRecipe, int time) {
-    public Recipe(String nameRecipe, int time){
-            this.nameRecipe = nameRecipe;
-            this.time = time;
-        }
+    public String getName() {
+        return name;
+    }
 
-        //public int getId() {
-        //return id;
-        //}
+    public int getTime() {
+        return time;
+    }
 
-        public String getNameRecipe () {
-            return nameRecipe;
-        }
-        @ @ -39, 10 + 32, 6 @@public List<String> getPreparingSteps () {
-            return preparingSteps;
-        }
+    public String[] getIngredientLine() {
+        return ingredientLine;
+    }
 
-        // public void setId(int id) {
-        // this.id = id;
-        //}
-        public void setNameRecipe (String nameRecipe){
-            this.nameRecipe = nameRecipe;
-        }
-        public void setTime ( int time){
-            this.time = time;
-        }
-        public void setIngredients (List < Ingredient > ingredients) {
-            this.ingredients = ingredients;
-        }
-        public void setPreparingSteps (List < String > preparingSteps) {
-            this.preparingSteps = preparingSteps;
-        }
+    public void setIngredientLine(String[] ingredientLine) {
+        this.ingredientLine = ingredientLine;
+    }
+
+    public String[] getStep() {
+        return step;
+    }
+
+    public void setStep(String[] step) {
+        this.step = step;
     }
 }

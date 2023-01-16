@@ -1,31 +1,44 @@
-package com.example.web1.service;
+package me.recipe.homework.model;
+
+import javax.swing.*;
 
 public class Ingredient {
-    private String nameIngredient;
-    private int amount;    // кол-во
-    private String unit;  // ед.измер
-    private String nameIngredient;
-    private int amount;    // кол-во инг
-    private String unit;  // ед.измерения
+    private String id;
+    private String name;
+    private int quantityIngredient;
+    private String unit;
 
-    public Ingredient(String nameIngredient, int amount, String unit) {
-        this.nameIngredient = nameIngredient;
-        this.amount = amount;
+    public Ingredient(String id, String name, int quantityIngredient, String unit) {
+        this.id = id;
+        this.name = name;
+        this.quantityIngredient = quantityIngredient;
         this.unit = unit;
     }
-    public String getNameIngredient() {
-        return nameIngredient;
+
+    public String getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
     }
 
-    public int getAmount() {
-        return amount;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQuantityIngredient() {
+        return quantityIngredient;
+    }
+
+    public void setQuantityIngredient(int quantityIngredient) {
+        this.quantityIngredient = quantityIngredient;
     }
 
     public String getUnit() {
         return unit;
     }
 
-    public void setNameIngredient(String nameIngredient) {
-        this.nameIngredient = nameIngredient;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }
