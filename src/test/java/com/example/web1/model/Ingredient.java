@@ -14,7 +14,6 @@ public class Ingredient {
         this.quantityIngredient = quantityIngredient;
         this.unit = unit;
     }
-
     public String getId() {
         return id;
     }

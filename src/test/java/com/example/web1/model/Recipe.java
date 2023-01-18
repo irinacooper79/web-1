@@ -1,7 +1,5 @@
 package model;
 
-import javax.swing.*;
-
 public class Recipe {
     private String id;
     private final String name;

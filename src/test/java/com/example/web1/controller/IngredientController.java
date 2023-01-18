@@ -5,7 +5,6 @@ import model.Recipe;
 import org.springframework.web.bind.annotation.RequestMapping;
 import service.IngredientService;
 import Request;
-
 import java.util.Collection;
 
 @RequestMapping("/ingredient")

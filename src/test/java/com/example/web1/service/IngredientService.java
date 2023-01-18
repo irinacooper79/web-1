@@ -24,7 +24,6 @@ public class IngredientService {
         }
         return ingredient;
     }
-
     public Ingredient getById (String id){
         if (ingredients.containsKey(id)){
             return ingredients.get(id);}
