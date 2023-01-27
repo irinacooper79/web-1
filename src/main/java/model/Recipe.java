@@ -1,4 +1,4 @@
-package com.example.web1.model;
+package model;
 
 
 import lombok.AllArgsConstructor;
@@ -17,7 +17,15 @@ public class Recipe {
     @NonNull
     private int preparingTime;
     @NonNull
-    private List<Ingredient> ingredients;
+    private List<com.example.web1.model.Ingredient> ingredients;
     @NonNull
     private List<String> steps;
+
+    public int add(Recipe recipe) {
+        return 0;
+    }
+
+    public int delete(int id) {
+        return 0;
+    }
 }

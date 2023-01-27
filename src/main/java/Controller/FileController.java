@@ -1,7 +1,6 @@
-package com.example.web1.Controller;
+package controller;
 
 
-import com.example.web1.service.FileService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -10,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import service.FileService;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package com.example.web1.Controller;
+package Controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,9 +10,9 @@ import java.util.Map;
 
 public class IngredientController {
 
-    private final com.example.web1.service.IngredientService ingredientService;
+    private final service.IngredientService ingredientService;
 
-    public IngredientController(com.example.web1.service.IngredientService ingredientService) {
+    public IngredientController(service.IngredientService ingredientService) {
         this.ingredientService = ingredientService;
     }
 
@@ -30,33 +30,26 @@ public class IngredientController {
 
     @PostMapping
 
-    public <IngredientAddException extends Throwable> ResponseEntity<?> addIngredient(@RequestBody com.example.web1.model.Ingredient ingredient) {
-        try {
-            int result = ingredientService.add(ingredient);
-            return ResponseEntity.ok(result);
-        } catch (IngredientAddException e ) {
-            return ResponseEntity.badRequest().body(ingredient);
-        }
+    public <IngredientAddException extends Throwable> ResponseEntity<?> addIngredient(@RequestBody com.example.web1.model.Ingredient ingredient) throws IngredientAddException {
+        int result = ingredientService.add(ingredient);
+        return ResponseEntity.ok(result);
     }
     @PutMapping("/{id}")
 
     public ResponseEntity<Integer> changeRecipe(@PathVariable int id, @RequestBody com.example.web1.model.Ingredient ingredient) {
-        try {
+
             int result = ingredientService.change(id, ingredient);
             return ResponseEntity.ok(result);
-        } catch (IngredientChangeException e) {
-                        return ResponseEntity.badRequest().body(id);
-        }
-    }
 
+            }
     @DeleteMapping("/{id}")
 
     public ResponseEntity<Integer> deleteIngredient(@PathVariable int id) {
-        try {
+
             int result = ingredientService.delete(id);
             return ResponseEntity.ok(result);
-        } catch (IngredientDeleteException e) {
-            return ResponseEntity.badRequest().body(id);
-        }
+
+
+
     }
 }

@@ -1,4 +1,4 @@
-package com.example.web1.service;
+package service;
 
 import java.util.Map;
 
