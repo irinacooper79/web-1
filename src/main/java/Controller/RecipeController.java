@@ -19,18 +19,6 @@ public class RecipeController {
 
     @GetMapping("/{id}")
 
-//  @ApiResponses(value = {  //я вообще не понял нужно ли это. В браузере и так отображается "схема".
-//          @ApiResponse(
-//                  responseCode = "200",
-//                  description = "Рецепт был найден",
-//                  content = {
-//                          @Content(
-//                                  mediaType = "application/json",
-//                                  schema = @Schema(implementation = Recipe.class) //как это писать для Map<Integer, Recipe>?
-//                          )
-//                  }
-//          )
-//  })
     public ResponseEntity<Recipe> getRecipe(@PathVariable int id) {
         return ResponseEntity.ok(recipeService.get(id));
     }

@@ -17,7 +17,7 @@ public class Recipe {
     @NonNull
     private int preparingTime;
     @NonNull
-    private List<com.example.web1.model.Ingredient> ingredients;
+    private List<model.Ingredient> ingredients;
     @NonNull
     private List<String> steps;
 

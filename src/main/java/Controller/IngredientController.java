@@ -18,25 +18,25 @@ public class IngredientController {
 
     @GetMapping("/{id}")
 
-    public com.example.web1.model.Ingredient getIngredient(@PathVariable int id) {
+    public model.Ingredient getIngredient(@PathVariable int id) {
         return ingredientService.get(id);
     }
 
     @GetMapping
 
-    public Map<Integer, com.example.web1.model.Ingredient> getAllIngredients() {
+    public Map<Integer, model.Ingredient> getAllIngredients() {
         return ingredientService.getAll();
     }
 
     @PostMapping
 
-    public <IngredientAddException extends Throwable> ResponseEntity<?> addIngredient(@RequestBody com.example.web1.model.Ingredient ingredient) throws IngredientAddException {
+    public <IngredientAddException extends Throwable> ResponseEntity<?> addIngredient(@RequestBody model.Ingredient ingredient) throws IngredientAddException {
         int result = ingredientService.add(ingredient);
         return ResponseEntity.ok(result);
     }
     @PutMapping("/{id}")
 
-    public ResponseEntity<Integer> changeRecipe(@PathVariable int id, @RequestBody com.example.web1.model.Ingredient ingredient) {
+    public ResponseEntity<Integer> changeRecipe(@PathVariable int id, @RequestBody model.Ingredient ingredient) {
 
             int result = ingredientService.change(id, ingredient);
             return ResponseEntity.ok(result);
