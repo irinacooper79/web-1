@@ -1,4 +1,4 @@
-package controller;
+package Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +11,6 @@ public class FirstController {
     public String appIsRunning() {
         return "Приложение запущено";
     }
-
     @GetMapping("/info")
 
     public String appInfo() {

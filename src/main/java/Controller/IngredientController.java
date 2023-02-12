@@ -15,7 +15,6 @@ public class IngredientController {
     public IngredientController(service.IngredientService ingredientService) {
         this.ingredientService = ingredientService;
     }
-
     @GetMapping("/{id}")
 
     public model.Ingredient getIngredient(@PathVariable int id) {

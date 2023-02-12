@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import java.util.List;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,7 +24,4 @@ public class Recipe {
         return 0;
     }
 
-    public int delete(int id) {
-        return 0;
-    }
-}
+   }

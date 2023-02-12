@@ -22,7 +22,6 @@ public class RecipeController {
     public ResponseEntity<Recipe> getRecipe(@PathVariable int id) {
         return ResponseEntity.ok(recipeService.get(id));
     }
-
     @GetMapping
 
     public Map<Integer, Recipe> getAllRecipes() {
